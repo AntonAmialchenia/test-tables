@@ -1,0 +1,722 @@
+{
+  "applications": [
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440000",
+      "request_date": "2023-05-01T10:30:00Z",
+      "request_comment": "Заявка на получение справки",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "passport.pdf",
+          "file_data": "base64encodeddata1"
+        },
+        {
+          "file_name": "application_form.docx",
+          "file_data": "base64encodeddata2"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440001",
+      "request_date": "2023-05-02T14:45:00Z",
+      "request_comment": "Запрос на обновление данных",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "update_form.pdf",
+          "file_data": "base64encodeddata3"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440002",
+      "request_date": "2023-05-03T09:15:00Z",
+      "request_comment": "Подача документов на визу",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "visa_application.pdf",
+          "file_data": "base64encodeddata4"
+        },
+        {
+          "file_name": "photo.jpg",
+          "file_data": "base64encodeddata5"
+        },
+        {
+          "file_name": "bank_statement.pdf",
+          "file_data": "base64encodeddata6"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440003",
+      "request_date": "2023-05-04T16:20:00Z",
+      "request_comment": "Заявка на регистрацию компании",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "company_charter.pdf",
+          "file_data": "base64encodeddata7"
+        },
+        {
+          "file_name": "founder_id.jpg",
+          "file_data": "base64encodeddata8"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440004",
+      "request_date": "2023-05-05T11:00:00Z",
+      "request_comment": "Запрос на получение лицензии",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "license_application.pdf",
+          "file_data": "base64encodeddata9"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440005",
+      "request_date": "2023-05-06T13:30:00Z",
+      "request_comment": "Подача налоговой декларации",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "tax_declaration.pdf",
+          "file_data": "base64encodeddata10"
+        },
+        {
+          "file_name": "income_statement.xlsx",
+          "file_data": "base64encodeddata11"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440006",
+      "request_date": "2023-05-07T08:45:00Z",
+      "request_comment": "Заявка на патент",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "patent_application.pdf",
+          "file_data": "base64encodeddata12"
+        },
+        {
+          "file_name": "invention_description.docx",
+          "file_data": "base64encodeddata13"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440007",
+      "request_date": "2023-05-08T15:10:00Z",
+      "request_comment": "Запрос на изменение адреса",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "address_change_form.pdf",
+          "file_data": "base64encodeddata14"
+        },
+        {
+          "file_name": "new_lease_agreement.pdf",
+          "file_data": "base64encodeddata15"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440008",
+      "request_date": "2023-05-09T10:20:00Z",
+      "request_comment": "Подача заявления на грант",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "grant_proposal.pdf",
+          "file_data": "base64encodeddata16"
+        },
+        {
+          "file_name": "budget_plan.xlsx",
+          "file_data": "base64encodeddata17"
+        },
+        {
+          "file_name": "team_cv.pdf",
+          "file_data": "base64encodeddata18"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440009",
+      "request_date": "2023-05-10T12:00:00Z",
+      "request_comment": "Заявка на регистрацию торговой марки",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "trademark_application.pdf",
+          "file_data": "base64encodeddata19"
+        },
+        {
+          "file_name": "logo.png",
+          "file_data": "base64encodeddata20"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440000",
+      "request_date": "2023-05-01T10:30:00Z",
+      "request_comment": "Заявка на получение справки",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "passport.pdf",
+          "file_data": "base64encodeddata1"
+        },
+        {
+          "file_name": "application_form.docx",
+          "file_data": "base64encodeddata2"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440001",
+      "request_date": "2023-05-02T14:45:00Z",
+      "request_comment": "Запрос на обновление данных",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "update_form.pdf",
+          "file_data": "base64encodeddata3"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440002",
+      "request_date": "2023-05-03T09:15:00Z",
+      "request_comment": "Подача документов на визу",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "visa_application.pdf",
+          "file_data": "base64encodeddata4"
+        },
+        {
+          "file_name": "photo.jpg",
+          "file_data": "base64encodeddata5"
+        },
+        {
+          "file_name": "bank_statement.pdf",
+          "file_data": "base64encodeddata6"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440003",
+      "request_date": "2023-05-04T16:20:00Z",
+      "request_comment": "Заявка на регистрацию компании",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "company_charter.pdf",
+          "file_data": "base64encodeddata7"
+        },
+        {
+          "file_name": "founder_id.jpg",
+          "file_data": "base64encodeddata8"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440004",
+      "request_date": "2023-05-05T11:00:00Z",
+      "request_comment": "Запрос на получение лицензии",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "license_application.pdf",
+          "file_data": "base64encodeddata9"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440005",
+      "request_date": "2023-05-06T13:30:00Z",
+      "request_comment": "Подача налоговой декларации",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "tax_declaration.pdf",
+          "file_data": "base64encodeddata10"
+        },
+        {
+          "file_name": "income_statement.xlsx",
+          "file_data": "base64encodeddata11"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440006",
+      "request_date": "2023-05-07T08:45:00Z",
+      "request_comment": "Заявка на патент",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "patent_application.pdf",
+          "file_data": "base64encodeddata12"
+        },
+        {
+          "file_name": "invention_description.docx",
+          "file_data": "base64encodeddata13"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440007",
+      "request_date": "2023-05-08T15:10:00Z",
+      "request_comment": "Запрос на изменение адреса",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "address_change_form.pdf",
+          "file_data": "base64encodeddata14"
+        },
+        {
+          "file_name": "new_lease_agreement.pdf",
+          "file_data": "base64encodeddata15"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440008",
+      "request_date": "2023-05-09T10:20:00Z",
+      "request_comment": "Подача заявления на грант",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "grant_proposal.pdf",
+          "file_data": "base64encodeddata16"
+        },
+        {
+          "file_name": "budget_plan.xlsx",
+          "file_data": "base64encodeddata17"
+        },
+        {
+          "file_name": "team_cv.pdf",
+          "file_data": "base64encodeddata18"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440009",
+      "request_date": "2023-05-10T12:00:00Z",
+      "request_comment": "Заявка на регистрацию торговой марки",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "trademark_application.pdf",
+          "file_data": "base64encodeddata19"
+        },
+        {
+          "file_name": "logo.png",
+          "file_data": "base64encodeddata20"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440000",
+      "request_date": "2023-05-01T10:30:00Z",
+      "request_comment": "Заявка на получение справки",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "passport.pdf",
+          "file_data": "base64encodeddata1"
+        },
+        {
+          "file_name": "application_form.docx",
+          "file_data": "base64encodeddata2"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440001",
+      "request_date": "2023-05-02T14:45:00Z",
+      "request_comment": "Запрос на обновление данных",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "update_form.pdf",
+          "file_data": "base64encodeddata3"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440002",
+      "request_date": "2023-05-03T09:15:00Z",
+      "request_comment": "Подача документов на визу",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "visa_application.pdf",
+          "file_data": "base64encodeddata4"
+        },
+        {
+          "file_name": "photo.jpg",
+          "file_data": "base64encodeddata5"
+        },
+        {
+          "file_name": "bank_statement.pdf",
+          "file_data": "base64encodeddata6"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440003",
+      "request_date": "2023-05-04T16:20:00Z",
+      "request_comment": "Заявка на регистрацию компании",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "company_charter.pdf",
+          "file_data": "base64encodeddata7"
+        },
+        {
+          "file_name": "founder_id.jpg",
+          "file_data": "base64encodeddata8"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440004",
+      "request_date": "2023-05-05T11:00:00Z",
+      "request_comment": "Запрос на получение лицензии",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "license_application.pdf",
+          "file_data": "base64encodeddata9"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440005",
+      "request_date": "2023-05-06T13:30:00Z",
+      "request_comment": "Подача налоговой декларации",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "tax_declaration.pdf",
+          "file_data": "base64encodeddata10"
+        },
+        {
+          "file_name": "income_statement.xlsx",
+          "file_data": "base64encodeddata11"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440006",
+      "request_date": "2023-05-07T08:45:00Z",
+      "request_comment": "Заявка на патент",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "patent_application.pdf",
+          "file_data": "base64encodeddata12"
+        },
+        {
+          "file_name": "invention_description.docx",
+          "file_data": "base64encodeddata13"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440007",
+      "request_date": "2023-05-08T15:10:00Z",
+      "request_comment": "Запрос на изменение адреса",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "address_change_form.pdf",
+          "file_data": "base64encodeddata14"
+        },
+        {
+          "file_name": "new_lease_agreement.pdf",
+          "file_data": "base64encodeddata15"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440008",
+      "request_date": "2023-05-09T10:20:00Z",
+      "request_comment": "Подача заявления на грант",
+      "request_processed": false,
+      "files": [
+        {
+          "file_name": "grant_proposal.pdf",
+          "file_data": "base64encodeddata16"
+        },
+        {
+          "file_name": "budget_plan.xlsx",
+          "file_data": "base64encodeddata17"
+        },
+        {
+          "file_name": "team_cv.pdf",
+          "file_data": "base64encodeddata18"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440009",
+      "request_date": "2023-05-10T12:00:00Z",
+      "request_comment": "Заявка на регистрацию торговой марки",
+      "request_processed": true,
+      "files": [
+        {
+          "file_name": "trademark_application.pdf",
+          "file_data": "base64encodeddata19"
+        },
+        {
+          "file_name": "logo.png",
+          "file_data": "base64encodeddata20"
+        }
+      ]
+    }
+  ],
+  "archive_applications": [
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440000",
+      "document_date": "2023-05-01",
+      "document_number": "DOC-2023-001",
+      "document_presentation": "Налоговая декларация за 2022 год",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440001",
+      "document_type": "IN",
+      "record_date": "2023-05-01T10:30:00Z",
+      "record_status": "NEW",
+      "record_status_comment": "Новый документ",
+      "record_comment": "Подана в срок",
+      "organization_name": "ООО \"Рога и копыта\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440002",
+      "tax_period": "PERIOD_YEAR",
+      "tax_period_end_date": "2022-12-31",
+      "files": [
+        {
+          "file_name": "tax_return_2022.pdf",
+          "file_presentation": "Налоговая декларация 2022"
+        },
+        {
+          "file_name": "financial_statement_2022.xlsx",
+          "file_presentation": "Финансовый отчет 2022"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440003",
+      "document_date": "2023-04-15",
+      "document_number": "DOC-2023-002",
+      "document_presentation": "Квартальный финансовый отчет Q1 2023",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440004",
+      "document_type": "OUT",
+      "record_date": "2023-04-15T14:45:00Z",
+      "record_status": "FINISHED",
+      "record_status_comment": "Обработка завершена",
+      "record_comment": "Отчет соответствует всем требованиям",
+      "organization_name": "АО \"Восход\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440005",
+      "tax_period": "PERIOD_Q1",
+      "tax_period_end_date": "2023-03-31",
+      "files": [
+        {
+          "file_name": "q1_2023_financial_statement.pdf",
+          "file_presentation": "Финансовый отчет Q1 2023"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440006",
+      "document_date": "2023-03-20",
+      "document_number": "DOC-2023-003",
+      "document_presentation": "Аудиторский отчет за 2022 год",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440007",
+      "document_type": "IN",
+      "record_date": "2023-03-20T09:15:00Z",
+      "record_status": "IN_PROCESS",
+      "record_status_comment": "На проверке у главного аудитора",
+      "record_comment": "Требуется дополнительная информация по разделу 3",
+      "organization_name": "ПАО \"Энергосеть\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440008",
+      "tax_period": "PERIOD_YEAR",
+      "tax_period_end_date": "2022-12-31",
+      "files": [
+        {
+          "file_name": "audit_report_2022.pdf",
+          "file_presentation": "Аудиторский отчет 2022"
+        },
+        {
+          "file_name": "audit_findings.docx",
+          "file_presentation": "Результаты аудита"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440009",
+      "document_date": "2023-02-28",
+      "document_number": "DOC-2023-004",
+      "document_presentation": "Годовой отчет 2022",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440010",
+      "document_type": "OUT",
+      "record_date": "2023-02-28T16:20:00Z",
+      "record_status": "FINISHED",
+      "record_status_comment": "Утверждено советом директоров",
+      "record_comment": "Готово к публикации",
+      "organization_name": "ООО \"ТехноПрогресс\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440011",
+      "tax_period": "PERIOD_YEAR",
+      "tax_period_end_date": "2022-12-31",
+      "files": [
+        {
+          "file_name": "annual_report_2022.pdf",
+          "file_presentation": "Годовой отчет 2022"
+        },
+        {
+          "file_name": "presentation_2022.pptx",
+          "file_presentation": "Презентация годового отчета"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440012",
+      "document_date": "2023-05-10",
+      "document_number": "INV-2023-001",
+      "document_presentation": "Счет за услуги консалтинга",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440013",
+      "document_type": "IN",
+      "record_date": "2023-05-10T11:00:00Z",
+      "record_status": "NEW",
+      "record_status_comment": "Новый документ",
+      "record_comment": "Срок оплаты - 30 дней",
+      "organization_name": "ИП Иванов",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440014",
+      "tax_period": "PERIOD_MONTH",
+      "tax_period_end_date": "2023-05-31",
+      "files": [
+        {
+          "file_name": "invoice_may_2023.pdf",
+          "file_presentation": "Счет за май 2023"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440015",
+      "document_date": "2023-04-30",
+      "document_number": "DOC-2023-005",
+      "document_presentation": "Ежемесячный отчет о продажах",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440016",
+      "document_type": "OUT",
+      "record_date": "2023-05-01T09:00:00Z",
+      "record_status": "FINISHED",
+      "record_status_comment": "Утверждено финансовым директором",
+      "record_comment": "Показатели выше ожидаемых",
+      "organization_name": "ООО \"СуперМаркет\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440017",
+      "tax_period": "PERIOD_MONTH",
+      "tax_period_end_date": "2023-04-30",
+      "files": [
+        {
+          "file_name": "sales_report_april_2023.xlsx",
+          "file_presentation": "Отчет о продажах за апрель 2023"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440018",
+      "document_date": "2023-05-15",
+      "document_number": "DOC-2023-006",
+      "document_presentation": "Уточненная налоговая декларация за 2022 год",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440019",
+      "document_type": "IN",
+      "record_date": "2023-05-15T13:30:00Z",
+      "record_status": "IN_PROCESS",
+      "record_status_comment": "На проверке в налоговой инспекции",
+      "record_comment": "Исправлены ошибки в разделе 2",
+      "organization_name": "ЗАО \"Стройкомплекс\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440020",
+      "tax_period": "PERIOD_YEAR",
+      "tax_period_end_date": "2022-12-31",
+      "files": [
+        {
+          "file_name": "updated_tax_return_2022.pdf",
+          "file_presentation": "Уточненная налоговая декларация 2022"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440021",
+      "document_date": "2023-05-20",
+      "document_number": "DOC-2023-007",
+      "document_presentation": "Отчет о движении денежных средств",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440022",
+      "document_type": "OUT",
+      "record_date": "2023-05-20T10:45:00Z",
+      "record_status": "NEW",
+      "record_status_comment": "Новый документ",
+      "record_comment": "Подготовлено для внутреннего аудита",
+      "organization_name": "ООО \"ФинансГрупп\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440023",
+      "tax_period": "PERIOD_MONTH",
+      "tax_period_end_date": "2023-05-31",
+      "files": [
+        {
+          "file_name": "cash_flow_may_2023.xlsx",
+          "file_presentation": "Отчет о движении денежных средств за май 2023"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440024",
+      "document_date": "2023-06-01",
+      "document_number": "DOC-2023-008",
+      "document_presentation": "Квартальный отчет Q2 2023",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440025",
+      "document_type": "OUT",
+      "record_date": "2023-06-01T15:00:00Z",
+      "record_status": "IN_PROCESS",
+      "record_status_comment": "На рассмотрении у финансового директора",
+      "record_comment": "Требуется уточнение данных по расходам",
+      "organization_name": "АО \"ИнвестХолдинг\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440026",
+      "tax_period": "PERIOD_Q2",
+      "tax_period_end_date": "2023-06-30",
+      "files": [
+        {
+          "file_name": "q2_2023_report.pdf",
+          "file_presentation": "Квартальный отчет Q2 2023"
+        },
+        {
+          "file_name": "q2_2023_appendix.xlsx",
+          "file_presentation": "Приложение к отчету Q2 2023"
+        }
+      ]
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655440027",
+      "document_date": "2023-06-05",
+      "document_number": "INV-2023-002",
+      "document_presentation": "Счет за аренду офиса",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440028",
+      "document_type": "IN",
+      "record_date": "2023-06-05T09:30:00Z",
+      "record_status": "FINISHED",
+      "record_status_comment": "Обработка завершена",
+      "record_comment": "Оплатить до 15 июня",
+      "organization_name": "ООО \"Бизнес-центр\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440029",
+      "tax_period": "PERIOD_MONTH",
+      "tax_period_end_date": "2023-06-30",
+      "files": [
+        {
+          "file_name": "rent_invoice_june_2023.pdf",
+          "file_presentation": "Счет за аренду офиса, июнь 2023"
+        }
+      ]
+    }
+  ]
+}
