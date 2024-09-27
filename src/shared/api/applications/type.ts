@@ -11,6 +11,10 @@ export interface Application {
   files: RequestFile[];
 }
 
+export interface ApplicationResponse extends Application {
+  id: string;
+}
+
 export interface ApplicationFilters {
   request_guid?: string;
   request_date?: string;

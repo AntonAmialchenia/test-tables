@@ -1,14 +1,20 @@
 import { requestGet, requestPost, requestPut } from '../requests';
-import { Application, ApplicationFilters, RequestFile } from './type';
+import {
+  Application,
+  ApplicationFilters,
+  ApplicationResponse,
+  RequestFile,
+} from './type';
 
-export type { Application, RequestFile, ApplicationFilters };
+export type { Application, RequestFile, ApplicationFilters, ApplicationResponse };
 
 const url = 'http://localhost:3000/applications';
 
 export const getApplications = (params?: ApplicationFilters) =>
-  requestGet<Application[]>(url, params);
+  requestGet<ApplicationResponse[]>(url, params);
 
 export const createApplication = (params: Application) =>
-  requestPost(url, params);
+  requestPost<ApplicationResponse>(url, params);
 
-export const updateApplication = (params: Application) => requestPut(url, params);
+export const updateApplication = (params: ApplicationResponse) =>
+  requestPut<ApplicationResponse>(`${url}/${params.id}`, params);

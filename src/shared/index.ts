@@ -1,4 +1,4 @@
-export { Header } from './Header';
+export { Header, ViewFileFormat } from './ui';
 export {
   createApplication,
   getApplications,
@@ -11,6 +11,14 @@ export type {
   Document,
   DocumentFile,
   RequestFile,
+  ApplicationResponse
 } from './api';
-export { RecordStatus, DocumentType, TaxPeriod } from './enums';
-export { formatDate, translateTaxPeriod } from './lib';
+export {
+  RecordStatus,
+  DocumentType,
+  TaxPeriod,
+  ModalViewsTypes,
+  FileFormats,
+  AlertNotificationTypes,
+} from './enums';
+export { formatDate, translateTaxPeriod, currentColor } from './lib';

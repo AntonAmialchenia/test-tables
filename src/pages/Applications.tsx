@@ -1,10 +1,18 @@
 import { useQuery } from '@tanstack/react-query';
-import { Table, TableColumnsType, TablePaginationConfig } from 'antd';
+import { Button, Table, TableColumnsType, TablePaginationConfig } from 'antd';
 import { useCallback, useState } from 'react';
-import { Application, formatDate, getApplications } from '../shared';
+import {
+  ApplicationResponse,
+  formatDate,
+  getApplications,
+  ModalViewsTypes,
+} from '../shared';
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
+import { useFeedbackStore } from '../entities';
+import { ApplicationModal } from '../features';
 
 export const Applications = () => {
+  const { setModalNotification, setModalViewsTypes } = useFeedbackStore();
   const [pagination, setPagination] = useState({
     offset: 0,
     limit: 20,
@@ -34,7 +42,20 @@ export const Applications = () => {
     }));
   };
 
-  const columns: TableColumnsType<Application> = [
+  const handleOpenModal = (
+    type: ModalViewsTypes,
+    record?: ApplicationResponse,
+  ) => {
+    setModalNotification({
+      show: true,
+      title: <h3 className="mb-3">Заявка</h3>,
+      content: <ApplicationModal application={record} />,
+      width: '100%',
+    });
+    setModalViewsTypes(type);
+  };
+
+  const columns: TableColumnsType<ApplicationResponse> = [
     {
       title: 'Дата',
       key: 'request_date',
@@ -56,11 +77,17 @@ export const Applications = () => {
       title: 'Комментарий',
       key: 'request_comment',
       dataIndex: 'request_comment',
-    },   
+    },
   ];
 
   return (
     <div className="h-full">
+      <Button
+        className="mb-5"
+        type="primary"
+        onClick={() => handleOpenModal(ModalViewsTypes.CREATE_APPLICATION)}>
+        Создать заявку
+      </Button>
       <Table
         columns={columns}
         dataSource={applications}
@@ -69,7 +96,7 @@ export const Applications = () => {
         scroll={{ y: '670px' }}
         onRow={(record) => ({
           onClick: () => {
-            console.log(record);
+            handleOpenModal(ModalViewsTypes.UPDATE_APPLICATION, record);
           },
         })}
         pagination={{
