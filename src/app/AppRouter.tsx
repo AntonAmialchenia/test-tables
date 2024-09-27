@@ -9,6 +9,7 @@ export function AppRouter() {
         <Route path="applications" element={<Applications />} />
         <Route path="archive" element={<Archive />} />
       </Route>
+      <Route path="*" element={<div>404</div>} />
     </Routes>
   );
 }

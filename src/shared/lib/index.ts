@@ -42,3 +42,37 @@ export const currentColor = (fileFormat: string) => {
       return '';
   }
 };
+
+export const getMimeType = (fileFormat: FileFormats): string => {
+  const mimeTypes: Record<FileFormats, string> = {
+    [FileFormats.JPG]: 'image/jpeg',
+    [FileFormats.PNG]: 'image/png',
+    [FileFormats.BMP]: 'image/bmp',
+    [FileFormats.TIFF]: 'image/tiff',
+    [FileFormats.PDF]: 'application/pdf',
+    [FileFormats.DOC]: 'application/msword',
+    [FileFormats.DOCX]:
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+    [FileFormats.RTF]: 'application/rtf',
+    [FileFormats.XLS]: 'application/vnd.ms-excel',
+    [FileFormats.XLSX]:
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+  };
+
+  return mimeTypes[fileFormat] || 'application/octet-stream';
+};
+
+export const IMAGE_FORMATS = [
+  FileFormats.JPG,
+  FileFormats.PNG,
+  FileFormats.BMP,
+  FileFormats.TIFF,
+];
+
+export const UNSUPPORTED_PREVIEW_FORMATS = [
+  FileFormats.DOC,
+  FileFormats.DOCX,
+  FileFormats.RTF,
+  FileFormats.XLS,
+  FileFormats.XLSX,
+];

@@ -285,6 +285,29 @@
         }
       ],
       "id": "75bb"
+    },
+    {
+      "request_guid": "550e8400-e29b-41d4-a716-446655441027",
+      "document_date": "2023-06-06",
+      "document_number": "INV-2023-002",
+      "document_presentation": "Счет за аренду офиса",
+      "document_presentation_guid": "660e8400-e29b-41d4-a716-446655440028",
+      "document_type": "IN",
+      "record_date": "2023-06-05T09:30:00Z",
+      "record_status": "REJECTED",
+      "record_status_comment": "Не верный формат документа",
+      "record_comment": "Оплатить до 15 июня",
+      "organization_name": "ООО \"Бизнес-центр\"",
+      "organization_guid": "770e8400-e29b-41d4-a716-446655440029",
+      "tax_period": "PERIOD_MONTH",
+      "tax_period_end_date": "2023-06-30",
+      "files": [
+        {
+          "file_name": "rent_invoice_june_2023.pdf",
+          "file_presentation": "Счет за аренду офиса, июнь 2023"
+        }
+      ],
+      "id": "77bb"
     }
   ]
 }

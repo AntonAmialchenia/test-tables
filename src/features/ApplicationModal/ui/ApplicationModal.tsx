@@ -150,16 +150,20 @@ export const ApplicationModal: FC<ApplicationModalProps> = (props) => {
         {application && (
           <p>{formatDate(application.request_date, 'dd.MM.yyyy')}</p>
         )}
-        {isUpdateApplication && (
+        {isUpdateApplication && !application?.request_processed && (
           <Button onClick={toggleEdit}>
             {isEdit ? 'Отменить' : 'Редактировать'}
           </Button>
         )}
       </Flex>
-      <p className="mb-5">{filePreviews.length} файлов</p>
+      <Flex className="mb-5" gap={10} align="center">
+        <p>{filePreviews.length} файлов</p>
+        <div className="grow h-px bg-black" />
+      </Flex>
+
       <Flex className="mb-10" wrap gap={10}>
         {filePreviews.map((file) => (
-          <ViewFileFormat key={file.file_name} file={file} />
+          <ViewFileFormat key={file.file_name} isEdit={isEdit} file={file} />
         ))}
         {(isCreateApplication || isEdit) && (
           <Upload

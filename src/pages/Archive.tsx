@@ -8,16 +8,15 @@ import {
   TaxPeriod,
   translateTaxPeriod,
   RecordStatus,
+  StatusIcon,
+  ModalViewsTypes,
 } from '../shared';
 import { useQuery } from '@tanstack/react-query';
-import {
-  CheckCircleOutlined,
-  CloseOutlined,
-  HourglassOutlined,
-  FireOutlined,
-} from '@ant-design/icons';
+import { useFeedbackStore } from '../entities';
+import { ArchiveModal } from '../features';
 
 export const Archive = () => {
+  const { setModalNotification, setModalViewsTypes } = useFeedbackStore();
   const [pagination, setPagination] = useState({
     offset: 0,
     limit: 20,
@@ -47,19 +46,14 @@ export const Archive = () => {
     }));
   };
 
-  const renderIcon = (status: RecordStatus) => {
-    switch (status) {
-      case RecordStatus.NEW:
-        return <FireOutlined className="text-green-600" />;
-      case RecordStatus.IN_PROCESS:
-        return <HourglassOutlined />;
-      case RecordStatus.FINISHED:
-        return <CheckCircleOutlined className="text-yellow-600" />;
-      case RecordStatus.REJECTED:
-        return <CloseOutlined className="text-red-600" />;
-      default:
-        return <CloseOutlined className="text-red-600" />;
-    }
+  const handleOpenModal = (record: Document) => {
+    setModalNotification({
+      show: true,
+      title: <h3 className="mb-3">Архив документов</h3>,
+      content: <ArchiveModal document={record} />,
+      width: '100%',
+    });
+    setModalViewsTypes(ModalViewsTypes.VIEW_ARCHIVED_APPLICATION);
   };
 
   const columns: TableColumnsType<Document> = [
@@ -73,7 +67,7 @@ export const Archive = () => {
       title: 'Статус заявки',
       key: 'record_status',
       dataIndex: 'record_status',
-      render: (status: RecordStatus) => renderIcon(status),
+      render: (status: RecordStatus) => <StatusIcon status={status} />,
     },
     {
       title: 'Номер исходного документа',
@@ -110,7 +104,7 @@ export const Archive = () => {
         scroll={{ y: '670px' }}
         onRow={(record) => ({
           onClick: () => {
-            console.log(record);
+            handleOpenModal(record);
           },
         })}
         pagination={{

@@ -1,4 +1,4 @@
-import { RecordStatus, TaxPeriod } from '../../enums';
+import { RecordStatus, TaxPeriod, DocumentType } from '../../enums';
 
 export interface ApplicationFilters {
 	request_guid?: string;
