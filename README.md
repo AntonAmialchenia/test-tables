@@ -1,3 +1,19 @@
+# Информация о архитектуре проекта
+
+[Основа архитектуры](https://feature-sliced.design/ru/)
+
+### Запус проекта
+
+ 1. Командой yarn установите зависимости
+ 2. Командой yarn dev происходит запус проекта в режиме разработки
+ 3. Командой yarn build происходит происходит сборка проекта
+
+## Важно 
+
+ Для полноценной работы приложения нужно запустить сервер командой yarn server
+
+ 
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
