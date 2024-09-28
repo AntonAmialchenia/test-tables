@@ -21,7 +21,7 @@ export const ArchiveModal: FC<ArchiveModalProps> = (props) => {
     <div>
       <Flex className="mb-6" gap={20}>
         <p className="font-semibold">
-          {formatDate(document.document_date, 'dd.MM.yyyy')}
+          {formatDate(document.document_date, 'DD.MM.YYYY')}
         </p>
         <p className="font-semibold">{document.organization_name}</p>
         <StatusIcon status={document.record_status} />
@@ -35,7 +35,7 @@ export const ArchiveModal: FC<ArchiveModalProps> = (props) => {
       <Flex gap={20}>
         <p>
           <span className="font-semibold">Дата документа: </span>
-          {formatDate(document.document_date, 'dd.MM.yyyy')}
+          {formatDate(document.document_date, 'DD.MM.YYYY')}
         </p>
         <p>
           <span className="font-semibold">Номер: </span>
@@ -56,12 +56,12 @@ export const ArchiveModal: FC<ArchiveModalProps> = (props) => {
         </p>
         <p>
           <span className="font-semibold">Конец периода: </span>
-          {formatDate(document.tax_period_end_date, 'dd.MM.yyyy')}
+          {formatDate(document.tax_period_end_date, 'DD.MM.YYYY')}
         </p>
       </Flex>
       <p className="mb-8">
         <span className="font-semibold">Год: </span>
-        {formatDate(document.document_date, 'yyyy')}
+        {formatDate(document.document_date, 'YYYY')}
       </p>
       <Flex className="mb-5" gap={10} align="center">
         <p>{document.files.length} файлов</p>

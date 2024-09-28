@@ -1,5 +1,10 @@
-import { Table, TableColumnsType, TablePaginationConfig } from 'antd';
-import { useCallback, useState } from 'react';
+import {
+  ConfigProvider,
+  Table,
+  TableColumnsType,
+  TablePaginationConfig,
+} from 'antd';
+import { useCallback, useEffect, useState } from 'react';
 import {
   formatDate,
   getArchiveApplications,
@@ -12,16 +17,26 @@ import {
   ModalViewsTypes,
 } from '../shared';
 import { useQuery } from '@tanstack/react-query';
-import { useFeedbackStore } from '../entities';
-import { ArchiveModal } from '../features';
+import { useFeedbackStore, useFilters } from '../entities';
+import { ArchiveModal, FilterPanel } from '../features';
+import dayjs from 'dayjs';
+import isBetween from 'dayjs/plugin/isBetween';
+import ruRU from 'antd/lib/locale/ru_RU';
 
-export const Archive = () => {
+dayjs.extend(isBetween);
+
+const Archive = () => {
   const { setModalNotification, setModalViewsTypes } = useFeedbackStore();
   const [pagination, setPagination] = useState({
     offset: 0,
     limit: 20,
   });
+  const { status, dateRange, taxPeriod, timeRange } = useFilters();
+
   const [totalCount, setTotalCount] = useState(0);
+  const [filteredApplications, setFilteredApplications] = useState<Document[]>(
+    [],
+  );
 
   const fetchArchiveApplicationList = useCallback(async () => {
     const response = await getArchiveApplications();
@@ -46,6 +61,37 @@ export const Archive = () => {
     }));
   };
 
+  const filterApplications = useCallback(
+    (applications: Document[]) => {
+      return applications.filter((app) => {
+        const dateInRange = dateRange
+          ? dayjs(app.document_date).isBetween(
+              dateRange[0],
+              dateRange[1],
+              null,
+              '[]',
+            )
+          : true;
+        const statusMatch = status ? app.record_status === status : true;
+        const taxPeriodMatch = taxPeriod ? app.tax_period === taxPeriod : true;
+        const timeRangeMatch = timeRange
+          ? dayjs(app.document_date).isAfter(dayjs().subtract(1, timeRange))
+          : true;
+
+        return dateInRange && statusMatch && taxPeriodMatch && timeRangeMatch;
+      });
+    },
+    [dateRange, status, taxPeriod, timeRange],
+  );
+
+  useEffect(() => {
+    if (archiveApplications) {
+      const filtered = filterApplications(archiveApplications);
+      setFilteredApplications(filtered);
+      setTotalCount(filtered.length);
+    }
+  }, [archiveApplications, filterApplications]);
+
   const handleOpenModal = (record: Document) => {
     setModalNotification({
       show: true,
@@ -61,7 +107,9 @@ export const Archive = () => {
       title: 'Дата исходного документа',
       key: 'document_date',
       dataIndex: 'document_date',
-      render: (date: string) => formatDate(date, 'dd.MM.yyyy'),
+      render: (date: string) => formatDate(date, 'DD.MM.YYYY'),
+      sorter: (a, b) =>
+        dayjs(a.document_date).unix() - dayjs(b.document_date).unix(),
     },
     {
       title: 'Статус заявки',
@@ -96,26 +144,31 @@ export const Archive = () => {
 
   return (
     <div className="h-full">
-      <Table
-        columns={columns}
-        dataSource={archiveApplications}
-        onChange={handlePaginationChange}
-        loading={isLoading}
-        scroll={{ y: '670px' }}
-        onRow={(record) => ({
-          onClick: () => {
-            handleOpenModal(record);
-          },
-        })}
-        pagination={{
-          current: pagination.offset / pagination.limit + 1,
-          pageSize: pagination.limit,
-          total: totalCount,
-          showSizeChanger: true,
-          showQuickJumper: true,
-          pageSizeOptions: ['10', '20', '30', '40'],
-        }}
-      />
+      <FilterPanel />
+      <ConfigProvider locale={ruRU}>
+        <Table
+          columns={columns}
+          dataSource={filteredApplications}
+          onChange={handlePaginationChange}
+          loading={isLoading}
+          scroll={{ y: '670px' }}
+          onRow={(record) => ({
+            onClick: () => {
+              handleOpenModal(record);
+            },
+          })}
+          pagination={{
+            current: pagination.offset / pagination.limit + 1,
+            pageSize: pagination.limit,
+            total: totalCount,
+            showSizeChanger: true,
+            showQuickJumper: true,
+            pageSizeOptions: ['10', '20', '30', '40'],
+          }}
+        />
+      </ConfigProvider>
     </div>
   );
 };
+
+export default Archive;

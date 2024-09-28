@@ -7,7 +7,6 @@ export {
 } from './api';
 export type {
   Application,
-  ApplicationFilters,
   Document,
   DocumentFile,
   RequestFile,
@@ -20,6 +19,7 @@ export {
   ModalViewsTypes,
   FileFormats,
   AlertNotificationTypes,
+  AppRoutes
 } from './enums';
 export {
   formatDate,

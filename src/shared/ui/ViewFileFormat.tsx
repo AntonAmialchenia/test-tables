@@ -18,7 +18,7 @@ interface ViewFileFormatProps {
 export const ViewFileFormat: FC<ViewFileFormatProps> = (props) => {
   const { file, className, isEdit } = props;
   const [isOpen, setIsOpen] = useState(false);
-  const fileFormat = file.file_name.split('.')[1];
+  const fileFormat = file.file_name?.split('.')[1];
 
   const isImage =
     fileFormat === FileFormats.JPG || fileFormat === FileFormats.PNG;
@@ -35,13 +35,13 @@ export const ViewFileFormat: FC<ViewFileFormatProps> = (props) => {
         <img
           src={fileData}
           alt={file.file_name}
-          className="max-w-full max-h-full"
+          className="w-[500px] h-[500px]"
         />
       );
     }
 
     if (fileFormat === FileFormats.PDF) {
-      return <iframe src={fileData} className="w-full h-full" />;
+      return <iframe src={fileData} className="w-[500px] h-[500px]" />;
     }
 
     if (UNSUPPORTED_PREVIEW_FORMATS.includes(fileFormat as FileFormats)) {
@@ -64,22 +64,23 @@ export const ViewFileFormat: FC<ViewFileFormatProps> = (props) => {
       ?.toLowerCase() as FileFormats;
 
     const mimeType = getMimeType(fileFormat);
-
-    const byteString = atob(fileData.split(',')[1]);
-    const ab = new ArrayBuffer(byteString.length);
-    const ia = new Uint8Array(ab);
-    for (let i = 0; i < byteString.length; i++) {
-      ia[i] = byteString.charCodeAt(i);
+    if (fileData) {
+      const byteString = atob(fileData.split(',')[1]);
+      const ab = new ArrayBuffer(byteString.length);
+      const ia = new Uint8Array(ab);
+      for (let i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+      }
+      const blob = new Blob([ab], { type: mimeType });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = file.file_name;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
     }
-    const blob = new Blob([ab], { type: mimeType });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = file.file_name;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
   };
 
   return (

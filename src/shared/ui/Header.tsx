@@ -1,6 +1,7 @@
 import { Button, Flex } from 'antd';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { AppRoutes } from '../enums';
 
 const HOME = 'Главная';
 const ARCHIVE = 'Архив документов';
@@ -14,11 +15,11 @@ export const Header = () => {
 
   const getTitle = () => {
     switch (pathname) {
-      case '/':
+      case AppRoutes.HOME:
         return HOME;
-      case '/applications':
+      case AppRoutes.APPLICATIONS:
         return APPLICATIONS;
-      case '/archive':
+      case AppRoutes.ARCHIVE:
         return ARCHIVE;
       default:
         return '';
@@ -31,8 +32,8 @@ export const Header = () => {
       <Flex gap={20} align="center">
         {isAuth && (
           <Flex align="center" gap={10}>
-            <Link to="/applications">{APPLICATIONS}</Link>
-            <Link to="/archive">{ARCHIVE}</Link>
+            <Link to={AppRoutes.APPLICATIONS}>{APPLICATIONS}</Link>
+            <Link to={AppRoutes.ARCHIVE}>{ARCHIVE}</Link>
           </Flex>
         )}
         <Button onClick={handleToggleAuth}>{isAuth ? 'Выйти' : 'Войти'}</Button>

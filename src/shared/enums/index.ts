@@ -1,3 +1,10 @@
+export const enum AppRoutes {
+  HOME = '/',
+  APPLICATIONS = '/applications',
+  ARCHIVE = '/archive',
+  NOT_FOUND = '*'
+}
+
 export const enum RecordStatus {
   NEW = 'NEW',
   IN_PROCESS = 'IN_PROCESS',
@@ -10,7 +17,7 @@ export const enum DocumentType {
   OUT = 'OUT',
 }
 
-export const enum TaxPeriod {
+export enum TaxPeriod {
   PERIOD_MONTH = 'PERIOD_MONTH',
   PERIOD_Q1 = 'PERIOD_Q1',
   PERIOD_Q2 = 'PERIOD_Q2',

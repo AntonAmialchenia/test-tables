@@ -1,9 +1,14 @@
-import { DateTime } from 'luxon';
 import { FileFormats, TaxPeriod } from '../enums';
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
+
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
 export const formatDate = (date: string, format: string): string => {
   const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  return DateTime.fromISO(date).setZone(timezone).toFormat(format);
+  return dayjs(date).tz(timezone).format(format);
 };
 
 export const translateTaxPeriod = (taxPeriod: TaxPeriod): string => {
@@ -15,7 +20,7 @@ export const translateTaxPeriod = (taxPeriod: TaxPeriod): string => {
     case TaxPeriod.PERIOD_Q2:
       return '2 квартала';
     case TaxPeriod.PERIOD_Q3:
-      return '5 квартала';
+      return '3 квартала';
     case TaxPeriod.PERIOD_Q4:
       return '4 квартала';
     case TaxPeriod.PERIOD_YEAR:
